@@ -191,17 +191,56 @@ App-level lifecycle hooks. `onInstall` auto-generates an API token (UUID) and st
 
 - Node.js 22
 - Yarn
-- [OCP CLI v2](https://cli.ocp.optimizely.com/install.sh)
-- [`@optimizely/ocp-local-env`](https://www.npmjs.com/package/@optimizely/ocp-local-env) (installed globally)
-- OCP developer account — credentials in `~/.ocp/credentials.json`
+- OCP CLI v2 (see install steps below)
+- [`@optimizely/ocp-local-env`](https://www.npmjs.com/package/@optimizely/ocp-local-env) (installed globally via npm)
+- OCP developer account — get your API key from the OCP developer portal
+
+### Install the OCP CLI
+
+**Mac / Linux**
+```bash
+curl -fsSL https://cli.ocp.optimizely.com/install.sh | bash
+```
+
+The installer downloads the latest release, verifies the checksum, and adds the `ocp` binary to `~/.local/share/ocp/client/bin`. Restart your terminal (or run `source ~/.zshrc`) so `ocp` is on your `PATH`.
+
+> GPG is not required — if prompted about skipping signature verification, answer `y`.
+
+**Windows (PowerShell)**
+```powershell
+iwr -useb https://cli.ocp.optimizely.com/install.ps1 | iex
+```
+
+**Verify the install**
+```bash
+ocp --version
+# @optimizely/ocp-cli-v2/2.x.x darwin-arm64 node-v22.x.x
+```
+
+**Alternatively — run without installing**
+```bash
+npx @optimizely/ocp-cli-v2 <command>
+```
+
+### Authenticate
+
+Create `~/.ocp/credentials.json` with your OCP API key:
 
 ```bash
-# OCP CLI install (Mac/Linux)
-curl -fsSL https://cli.ocp.optimizely.com/install.sh | bash
-
-# Credentials
 mkdir -p ~/.ocp
 echo '{"apiKey": "<YOUR_OCP_API_KEY>"}' > ~/.ocp/credentials.json
+```
+
+Verify authentication and list your sandbox tracker IDs:
+
+```bash
+ocp accounts whoami
+```
+
+### Install the local testing tool
+
+```bash
+npm install -g @optimizely/ocp-local-env
 ```
 
 ### Start the local testing tool
