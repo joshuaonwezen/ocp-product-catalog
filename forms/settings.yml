@@ -1,0 +1,30 @@
+sections:
+  - key: api
+    label: API Configuration
+    elements:
+    - type: instructions
+      text: >
+        Your API token is shown below. Use it as a Bearer token in the
+        Authorization header: `Authorization: Bearer <token>`.
+        You can replace the token if needed.
+    - type: text
+      key: apiToken
+      label: API Token
+      required: true
+      help: |
+        Bearer token for authenticating API requests.
+    - type: instructions
+      text: >
+        Use the URL below to access the Product Management UI
+        in your browser.
+    - type: text
+      key: uiUrl
+      label: Product Management UI URL
+      required: false
+      help: |
+        URL to the product management web interface.
+        This is auto-populated on install.
+    - type: button
+      key: refreshUrl
+      label: Refresh UI URL
+      action: refresh_ui_url

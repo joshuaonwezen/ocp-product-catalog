@@ -1,0 +1,10 @@
+{
+  "isInstalled": true,
+  "functionGuids": {
+    "product_api": "444b4b08-9575-45df-9ac7-1108c9a663a8",
+    "product_ui": "5d37b127-8391-40e7-a296-9dc73303a531"
+  },
+  "sourceGuids": {
+    "product": "4539bd58-39d6-4ef4-9112-ee1fee812fe4"
+  }
+}

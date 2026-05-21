@@ -1,0 +1,24 @@
+{
+  "product:2c0c05a7-3307-4f42-9dbf-cc2bd8624611": {
+    "data": {
+      "id": "2c0c05a7-3307-4f42-9dbf-cc2bd8624611",
+      "name": "Premium Wireless Bluetooth Headphones",
+      "sku": "AUDIO-WH-2024-001",
+      "description": "High-quality over-ear wireless headphones with active noise cancellation, 40-hour battery life, and premium sound quality. Features include multi-device connectivity, voice assistant support, and comfortable memory foam ear cushions. Perfect for music lovers, travelers, and professionals who demand the best audio experience.",
+      "price": 299.99,
+      "currency": "USD",
+      "category": "Electronics",
+      "imageUrl": "https://images.example.com/products/wireless-headphones-black.jpg",
+      "inStock": true,
+      "createdAt": "2026-02-16T14:38:22.588Z",
+      "updatedAt": "2026-02-16T14:38:22.588Z"
+    }
+  },
+  "product_index": {
+    "data": {
+      "ids": [
+        "2c0c05a7-3307-4f42-9dbf-cc2bd8624611"
+      ]
+    }
+  }
+}

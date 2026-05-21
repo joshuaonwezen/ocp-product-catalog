@@ -1,0 +1,44 @@
+meta:
+  app_id: product_catalog
+  display_name: Product Catalog
+  version: 1.0.1-dev.3
+  vendor: optimizely
+  summary: A simple product catalog with sync to Optimizely Graph
+  support_url: https://www.optimizely.com
+  contact_email: joshua.onwezen@optimizely.com
+  categories:
+    - Commerce Platform
+  availability:
+    - us
+
+runtime: node22
+
+functions:
+  product_api:
+    entry_point: ProductApi
+    description: REST API for product CRUD operations
+    installation_resolution:
+      type: QUERY_PARAM
+      key: trackerId
+  product_ui:
+    entry_point: ProductUI
+    description: Web interface for managing products
+    installation_resolution:
+      type: QUERY_PARAM
+      key: trackerId
+
+sources:
+  product:
+    description: Product Catalog
+    schema:
+      entry_point: ProductSchema
+    function:
+      entry_point: ProductApiSource
+    jobs:
+      import_products:
+        entry_point: ImportProducts
+        description: Import all products to Optimizely Graph
+    lifecycle:
+      entry_point: ProductLifecycle
+
+environment: []
