@@ -366,6 +366,49 @@ curl -X DELETE -H "Authorization: Bearer $TOKEN" "$BASE/products/<id>"
 
 ---
 
+## Claude Code skills
+
+The `skills/ocp-app-development/` directory contains a [Claude Code skill](https://docs.anthropic.com/en/docs/claude-code) that gives Claude deep context about OCP development patterns — app types, SDK APIs, CLI commands, storage, lifecycle hooks, and more. It is automatically loaded by Claude when working in this project via the `CLAUDE.md` file at the repo root.
+
+### What the skill covers
+
+| Reference file | Topic |
+|---|---|
+| `SKILL.md` | OCP overview, app types, developer journey, component index |
+| `references/app-yml.md` | Full `app.yml` structure and all configuration options |
+| `references/function.md` | `App.Function` and `App.GlobalFunction` patterns |
+| `references/job.md` | `App.Job` — background tasks, state machines, pagination |
+| `references/app-sdk/storage.md` | `settings`, `secrets`, `kvStore`, `sharedKvStore` APIs |
+| `references/app-sdk/logging.md` | `logger` usage and log levels |
+| `references/app-sdk/notifications.md` | In-app notification API |
+| `references/cli-commands/deployment.md` | `prepare`, `publish`, `install`, job management |
+| `references/cli-commands/scaffolding.md` | `register`, `init`, `add` |
+| `references/cli-commands/validation.md` | `validate` and type-check commands |
+| `references/cli-commands/logging.md` | `app logs`, `get-log-level`, `set-log-level` |
+
+### How it is loaded
+
+`CLAUDE.md` at the project root uses Claude Code's `@`-import syntax to pull in the skill on every session:
+
+```markdown
+@skills/ocp-app-development/SKILL.md
+```
+
+Claude Code automatically reads `CLAUDE.md` when you open the project, so no manual setup is needed.
+
+### Installing the skill globally (optional)
+
+To make the skill available across **all** your OCP projects without needing a `CLAUDE.md` in each one, copy the skill to your global Claude skills directory:
+
+```bash
+mkdir -p ~/.claude/skills
+cp -r skills/ocp-app-development ~/.claude/skills/
+```
+
+Claude Code will then load the skill automatically in any project.
+
+---
+
 ## Running tests
 
 ```bash
