@@ -194,6 +194,7 @@ App-level lifecycle hooks. `onInstall` auto-generates an API token (UUID) and st
 - OCP CLI v2 (see install steps below)
 - [`@optimizely/ocp-local-env`](https://www.npmjs.com/package/@optimizely/ocp-local-env) (installed globally via npm)
 - OCP developer account — get your API key from the OCP developer portal
+  - If you don't have access to the OCP developer portal send an email to integrations@optimizely.com requesting a dev account for OCP stating the github usernames and emails of your developers and the name of the organization on the contract with Optimizely
 
 ### Install the OCP CLI
 
