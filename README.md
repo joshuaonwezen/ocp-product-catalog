@@ -225,7 +225,7 @@ npx @optimizely/ocp-cli-v2 <command>
 
 ### Authenticate
 
-Create `~/.ocp/credentials.json` with your OCP API key:
+Create `~/.ocp/credentials.json` with your OCP API key (you get a link to create one when emailing integrations@optimizely.com):
 
 ```bash
 mkdir -p ~/.ocp
