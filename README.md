@@ -250,10 +250,10 @@ npm install -g @optimizely/ocp-local-env
 yarn install
 
 # Port 3000 is OCP's default; use --port if something else is already there
-ocp-local-env --port 3001 --path .
+ocp-local-env --port 3000 --path .
 ```
 
-Open **http://localhost:3001** in your browser. The local testing tool simulates the full OCP runtime including KV store, settings, lifecycle hooks, and source emission.
+Open **http://localhost:3000** in your browser. The local testing tool simulates the full OCP runtime including KV store, settings, lifecycle hooks, and source emission.
 
 **Direct function URLs (local):**
 
