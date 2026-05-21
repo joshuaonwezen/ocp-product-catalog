@@ -259,8 +259,8 @@ Open **http://localhost:3000** in your browser. The local testing tool simulates
 
 | Function | URL |
 |---|---|
-| Product UI | `http://localhost:3001/functions/product_catalog/product_ui/<guid>?trackerId=local-testing-tracker` |
-| REST API | `http://localhost:3001/functions/product_catalog/product_api/<guid>/products?trackerId=local-testing-tracker` |
+| Product UI | `http://localhost:3000/functions/product_catalog/product_ui/<guid>?trackerId=local-testing-tracker` |
+| REST API | `http://localhost:3000/functions/product_catalog/product_api/<guid>/products?trackerId=local-testing-tracker` |
 
 The `<guid>` values are auto-generated on first access and persisted to `.ocp-local/config.json`. The local API token is in `.ocp-local/settings.json`.
 
